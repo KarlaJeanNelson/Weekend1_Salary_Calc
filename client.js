@@ -1,3 +1,5 @@
+"use strict";
+
 console.log('js');
 $(ready);
 
@@ -23,14 +25,7 @@ function submitForm(e) {
 	e.preventDefault()
 	// console.log('in submitForm');
 	let ar = $(this).serializeArray();
-	console.log('serialized', ar);
-
-	ar = employeeArray(ar);
-	console.log('employeeArray', ar);
-	
-	ar = addToList(ar);
-	console.log('addToList', ar);
-	
+	addToList(employeeArray(ar));
 	updateDOM();
 }
 
@@ -69,7 +64,6 @@ const checkId = id => {
 
 const checkSalary = employee => {
 	console.log(employee.salary);
-	
 	if (isNaN(Number(employee.salary)) || Number(employee.salary) < 0) {
 		alert('Salary must be a non-negative number.');
 		return false;
@@ -80,14 +74,14 @@ const checkSalary = employee => {
 
 const addToList = employee => {
 	if (checkSalary(employee) && checkId(employee.employeeid)) {
-		employees.push(employee)
+		employees.push(employee);
 	}
 	return employees;
 }
 
 const updateDOM = () => {
-	console.log('in updateDOM');
-	console.log('employees', employees);
+	// console.log('in updateDOM');
+	// console.log('employees', employees);
 	$("tbody").empty()	
 	for (let i of employees) {
 		$("tbody").append("<tr></tr>");
@@ -96,7 +90,7 @@ const updateDOM = () => {
 		.append(`<td>${i.lastname}</td>`)
 		.append(`<td>${i.jobtitle}</td>`)
 		.append(`<td class="has-text-right">${i.salary}</td>`)
-		.append(`<td><button class="button is-danger">Delete</td>`)
+		.append(`<td class="has-text-right"><button class="button is-small is-danger">Delete</td>`)
 
 		$("button:last")
 		.attr("id", i.employeeid)
@@ -130,17 +124,6 @@ const removeRow = e => {
 	employees.splice(index, 1);
 	return updateDOM();	
 }
-
-const ensureNum = entity =>
-  typeof entity === 'string' ? parseInt(entity) : entity
-
-const addNums = (a, b) => a + b
-
-const incrementEach = (ar, by) =>
-  ar.map(ensureNum)
-		.map(num => addNums(num, by))
-		
-		console.log(incrementEach([1, 2, 3,], 2));
 
 // The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
 
