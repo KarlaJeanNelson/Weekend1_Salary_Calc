@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Salary Calculator</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+		<script src="client.js"></script>
+	</head>
+	<body>
+		<section class="hero">
+			<div class="hero-body">
+				<div class="container-fluid">
+					<h1 class="title has-text-centered">
+						Salary Calculator
+					</h1>
+				</div>
+			</div>
+		</section>
+		<main>
+			<section>
+				<div class="columns">
+					<div class="column is-3">	
+							<form>
+								<label class="label" for="firstname">First Name</label>
+								<input type="text" class="input" id="firstname" name="firstname" placeholder="first name" value="test firstname" required>
+								<label class="label" for="lastname">Last Name</label>
+								<input type="text" class="input" id="lastname" name="lastname" placeholder="last name" value="test lastname" required>	
+								<label class="label" for="employeeid">Employee ID</label>
+								<input type="text" class="input" id="employeeid" name="employeeid" placeholder="employee id" value="test id" required>	
+								<label class="label" for="jobtitle">Job Title</label>
+								<input type="text" class="input" id="jobtitle" name="jobtitle" placeholder="job title" value="test title" required>
+								<label class="label" for="salary">Annual Salary</label>
+								<input type="number" min="0" class="input" id="salary" name="salary" placeholder="annual salary" value="30000" required>
+								<button class="button is-primary" type="submit">Submit</button>
+							</form>
+					</div>
+					<div class="column">
+						<p>test</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

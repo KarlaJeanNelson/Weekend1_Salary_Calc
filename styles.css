@@ -1,0 +1,21 @@
+html {
+    background-color: powderblue;
+}
+
+main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.column {
+    padding: .25rem;
+}
+
+label {
+    margin: 0!important;
+}
+
+.control {
+    display: flex!important;
+    justify-content: flex-end!important;
+}

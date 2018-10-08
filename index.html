@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Salary Calculator</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+		<script src="client.js"></script>
+	</head>
+	<body>
+		<header class="hero">
+			<div class="hero-body">
+				<div class="container-fluid">
+					<h1 class="title has-text-centered">
+						Salary Calculator
+					</h1>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section>
+				<form>
+					<div class="columns is-centered is-marginless">
+						<div class="control column">
+								<input type="text" class="input" id="employeeid" name="employeeid" placeholder="employee id" autofocus required>	
+						</div>	
+						<div class="control column">
+							<input type="text" class="input" id="firstname" name="firstname" placeholder="first name" required>
+						</div>
+						<div class="control column">
+								<input type="text" class="input" id="lastname" name="lastname" placeholder="last name" required>	
+						</div>
+						<div class="control column">
+								<input type="text" class="input" id="jobtitle" name="jobtitle" placeholder="job title" required>
+						</div>
+						<div class="control column">
+								<input type="text" min="0" class="input" id="salary" name="salary" placeholder="annual salary" required>
+						</div>
+					</div>
+					<div class="columns is-marginless">
+						<div class="control column">
+							<button class="button is-primary" type="submit">Submit</button>	
+						</div>
+					</div>
+				</form>
+			</section>
+			<section>
+				<table class="table is-striped is-fullwidth">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Title</th>
+							<th class="has-text-right">Salary</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th class="has-text-right">Monthly Total:</th>
+							<th class="has-text-right" id="monthlytotal">$0.00</th>
+							<th></th>
+						</tr>
+					</tfoot>
+					<tbody>
+					</tbody>
+				</table>
+			</section>
+		</main>
+		<!-- <label class="label is-sr-only" for="firstname">First Name</label> -->
+		<!-- <label class="label is-sr-only" for="lastname">Last Name</label> -->
+		<!-- <label class="label is-sr-only" for="employeeid">Employee ID</label> -->
+		<!-- <label class="label is-sr-only" for="jobtitle">Job Title</label> -->
+		<!-- <label class="label is-sr-only" for="salary">Annual Salary</label> -->
+		<!-- <section>
+			<table class="table is-bordered is-striped is-fullwidth">
+				<thead>
+					<tr>
+						<th>ID: First & Last Names, Title</th>
+						<th>Salary</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th></th>
+						<th>test total</th>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>12345 Karla Nelson, Sr. Engineer</td>
+						<td>$100,000,000</td>
+						<td><button class="button">delete</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</section> -->
+	</body>
+</html>
