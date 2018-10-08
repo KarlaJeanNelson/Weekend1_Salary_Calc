@@ -3,7 +3,7 @@ html {
 }
 
 header {
-    padding: 1.5rem;
+    padding-top: 1.5rem;
 }
 
 main {
@@ -39,5 +39,5 @@ label {
 }
 
 .red {
-    background-color: tomato;
+    background-color: hsl(348, 100%, 61%);
 }

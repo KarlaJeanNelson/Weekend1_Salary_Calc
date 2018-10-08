@@ -90,7 +90,7 @@ const updateDOM = () => {
 		.append(`<td>${i.lastname}</td>`)
 		.append(`<td>${i.jobtitle}</td>`)
 		.append(`<td class="has-text-right">${i.salary}</td>`)
-		.append(`<td class="has-text-right"><button class="button is-small is-danger">Delete</td>`)
+		.append(`<td class="has-text-right"><button class="button is-danger is-small">Delete</td>`)
 
 		$("button:last")
 		.attr("id", i.employeeid)
