@@ -2,6 +2,7 @@ console.log('js');
 $(ready);
 
 let employees = [];
+const threshhold = 20000;
 
 class Employee {
 	constructor(firstname, lastname, title, id, salary) {
@@ -101,7 +102,7 @@ const updateDOM = () => {
 		.attr("id", i.employeeid)
 		.on("click", removeRow);
 	}
-	updateTotal();
+	toggleClass(updateTotal(), $("tfoot"), "red");
 	$("form input").val('');
 	$("#employeeid").focus();
 	return;
@@ -113,6 +114,12 @@ const updateTotal = () => {
 	}, 0);
 	console.log('total', total);
 	$("#monthlytotal").html((total/12).toFixed(2));
+	return parseFloat($("#monthlytotal").html()) > threshhold;
+}
+
+const toggleClass = (bool, element, className) => {
+	bool ? element.addClass(className) : element.removeClass(className)
+	return;
 }
 
 const removeRow = e => {
